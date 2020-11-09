@@ -5,31 +5,27 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
-
-import com.entitie.bean.Clients;
+import com.entitie.Client;
 
 public class ClientDAO implements IClient {
 	
-	//@PersistenceContext(unitName="senbase")
-	//private EntityManager em;
 	
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("senbase");
 	EntityManager em = emf.createEntityManager();
 	
 	
 	@Override
-	public List<Clients> liste() {
+	public List<Client> liste() {
 		return em.createQuery("SELECT p FROM Clients p").getResultList();
 	}
 
 	@Override
-	public int add(Clients Clients) {
+	public int add(Client Client) {
 
 		int yes = 0 ;
 		try {
 			em.getTransaction().begin();
-			em.persist(Clients);
+			em.persist(Client);
 			em.getTransaction().commit();
 			yes = 1 ;
 		} catch (Exception e) {

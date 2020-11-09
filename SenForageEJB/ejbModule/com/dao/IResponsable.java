@@ -2,11 +2,11 @@ package com.dao;
 
 import java.util.List;
 
-import com.entitie.bean.Responsables;
+import com.entitie.Responsable;
 
 
 public interface IResponsable {
-	public List<Responsables> liste();
-	public int add(Responsables Responsables);
+	public List<Responsable> liste();
+	public int add(Responsable Responsable);
 
 }

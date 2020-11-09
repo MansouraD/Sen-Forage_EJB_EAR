@@ -5,30 +5,27 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
 
-import com.entitie.bean.Villages;
+import com.entitie.Village;
 
 public class VillageDAO implements IVillage {
 	
-	//@PersistenceContext(unitName="senbase")
-	//private EntityManager em;
 	
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("senbase");
 	EntityManager em = emf.createEntityManager();
 	
 	@Override
-	public List<Villages> liste() {
+	public List<Village> liste() {
 		
 		return em.createQuery("SELECT p FROM Villages p").getResultList();
 	}
 
 	@Override
-	public int add(Villages Villages) {
+	public int add(Village Village) {
 		int yes = 0 ;
 		try {
 			em.getTransaction().begin();
-			em.persist(Villages);
+			em.persist(Village);
 			em.getTransaction().commit();
 			yes = 1 ;
 		} catch (Exception e) {

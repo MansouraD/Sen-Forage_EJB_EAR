@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-import com.entitie.Responsable;
+import com.entitie.*;
 import com.dao.Authentification;
 import com.dao.IResponsable;
 import com.dao.ResponsableDAO;
@@ -58,7 +58,7 @@ public class Responsable extends HttpServlet {
 		}
 		
 		
-		Responsables res = new Responsables();
+		Responsable res = new Responsable();
 		
 		res.setNom(request.getParameter("nom"));
 		res.setPrenom(request.getParameter("prenom"));

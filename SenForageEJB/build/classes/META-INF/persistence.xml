@@ -4,9 +4,9 @@
       xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="SenForageEJB" transaction-type="JTA">
 	<jta-data-source>java:/dsSenForage</jta-data-source>
-		<class>com.Responsable</class>
-		<class>com.Client</class>
-		<class>com.Village</class>
+		<class>com.entitie.Responsable</class>
+		<class>com.entitie.Client</class>
+		<class>com.entitie.Village</class>
 		<properties>
 			<property name="javax.persistence.schema-generation.database.action" value="update"/>
 		</properties>

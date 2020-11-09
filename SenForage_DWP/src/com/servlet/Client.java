@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.entitie.Client;
+import com.entitie.*;
 import com.dao.ClientDAO;
 import com.dao.IClient;
 
@@ -39,9 +39,9 @@ public class Client extends HttpServlet {
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
-    	Clients cl = new Clients();
+    	Client cl = new Client();
 
-		cl.setNom_famille(request.getParameter("nom_famille"));
+		cl.setNom_de_famille(request.getParameter("nom_de_famille"));
 		cl.setVillage( request.getParameter("village"));
 		cl.setAdresse(request.getParameter("adresse"));
 		cl.setNumero_tel(request.getParameter("numero_tel"));

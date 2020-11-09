@@ -4,10 +4,6 @@ import java.io.Serializable;
 import java.lang.String;
 import javax.persistence.*;
 
-/**
- * Entity implementation class for Entity: Responsable
- *
- */
 @Entity
 public class Responsable implements Serializable{
 	private static final long serialVersionUID = 1L;

@@ -2,12 +2,13 @@ package com.dao;
 
 import java.util.List;
 
-import com.entitie.bean.Clients;
+import com.entitie.Client;
+
 
 public interface IClient {
 	
-	public List<Clients> liste();
-	public int add(Clients Clients);
+	public List<Client> liste();
+	public int add(Client Clients);
 	
 	
 	

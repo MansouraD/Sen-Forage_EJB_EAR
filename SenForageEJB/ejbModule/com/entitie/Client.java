@@ -18,11 +18,13 @@ public class Client implements Serializable{
 	private String nom_de_famille;
 	private String adresse;
 	private int village;
-	
+	private int numero_tel;
 
 	public Client() {
 		super();
 	}   
+	
+	
 	public int getId() {
 		return this.id;
 	}
@@ -50,6 +52,13 @@ public class Client implements Serializable{
 
 	public void setVillage(int village) {
 		this.village = village;
+	}
+	
+	public int getNumero_tel() {
+		return numero_tel;
+	}
+	public void setNumero_tel(int numero_tel) {
+		this.numero_tel = numero_tel;
 	}
    
 }

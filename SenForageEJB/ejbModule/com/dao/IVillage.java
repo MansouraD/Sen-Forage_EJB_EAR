@@ -2,9 +2,9 @@ package com.dao;
 
 import java.util.List;
 
-import com.entitie.bean.Villages;
+import com.entitie.Village;
 
 public interface IVillage {
-	public List<Villages> liste();
-	public int add(Villages Villages);
+	public List<Village> liste();
+	public int add(Village Village);
 }

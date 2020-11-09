@@ -7,15 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.entitie.Village;
+import com.entitie.*;
 import com.dao.IVillage;
 import com.dao.VillageDAO;
 
 
  
-/**
- * Servlet implementation class Village
- */
 @WebServlet( name="village", urlPatterns = {"/vlg","/pvlg", "/village.insert"})
 public class Village extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,7 +32,7 @@ public class Village extends HttpServlet {
     @Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Villages vil = new Villages();
+		Village vil = new Village();
 		
 		vil.setNom(request.getParameter("nom_village"));
 		

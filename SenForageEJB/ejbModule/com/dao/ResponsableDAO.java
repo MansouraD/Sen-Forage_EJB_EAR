@@ -6,30 +6,27 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
 
-import com.entitie.bean.Responsables;
+import com.entitie.Responsable;
 
 public class ResponsableDAO implements IResponsable {
 	
-	//@PersistenceContext(unitName="senbase")
-	//private EntityManager em;
 	
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("senbase");
 	EntityManager em = emf.createEntityManager();
 	
 	@Override
-	public List<Responsables> liste() {
+	public List<Responsable> liste() {
 		
 		return em.createQuery("SELECT p FROM Responsables p").getResultList();
 	}
 
 	@Override
-	public int add(Responsables Responsables) {
+	public int add(Responsable Responsable) {
 		int yes = 0 ;
 		try {
 			em.getTransaction().begin();
-			em.persist(Responsables);
+			em.persist(Responsable);
 			em.getTransaction().commit();
 			yes = 1 ;
 		} catch (Exception e) {
